@@ -1,8 +1,8 @@
-import type { ReactNode } from "react";
-import { Outlet } from "react-router-dom"
+import type { ReactNode } from 'react';
+import { Outlet } from 'react-router-dom';
 
 interface MainContentProps {
-  children?: ReactNode; // Объявляем children как необязательный
+  children?: ReactNode;
 }
 
 export const MainContent: React.FC<MainContentProps> = ({ children }) => {
@@ -10,6 +10,6 @@ export const MainContent: React.FC<MainContentProps> = ({ children }) => {
     <main>
       {children}
       {<Outlet />}
-    </main> 
-  )
-}
+    </main>
+  );
+};
