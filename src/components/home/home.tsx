@@ -1,9 +1,9 @@
-import { Main } from "./main/main"
+import { Main } from './main/main';
 
 export const Home = () => {
   return (
-    <div className="container mx-auto w-262">
+    <div className="w-262 container mx-auto">
       <Main />
-    </div> 
-  )
-}
+    </div>
+  );
+};

@@ -1,14 +1,13 @@
 import { Form, Formik } from 'formik';
-import { Input } from '../input/input';
+import { Input } from '../../../shared/ui/input/input';
 import { Link } from 'react-router-dom';
 import { validationShema } from './validation-scheme';
-import createAccountImg from '../../../shared/img/crateaccount.png'
 
 interface IInitialValues {
-  userName: string,
-  email: string,
-  password: string,
-  confirmPassword: string,
+  userName: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
 }
 
 export const SignUpForm = () => {
@@ -18,35 +17,60 @@ export const SignUpForm = () => {
     password: '',
     confirmPassword: '',
   };
-  
+
   return (
-    <section className='flex'>
-      <div className='mr-15 w-1/2'>
-        <img src={createAccountImg} alt="space image" className='rounded-r-[20px] object-cover w-full h-auto max-h-190' />
-      </div>
-      <div className='flex flex-col font-work text-white top-25 relative'>
-        <h1 className='text-[51px] font-semibold mb-5'>Create Account</h1>
-        <p className='text-[22px] font-normal'>Welcome! Enter Your Details And Start <br /> Creating, Collecting And Selling NFTs.</p>
-        <div>
-          <Formik
-            initialValues={initialValues}
-            validationSchema={validationShema}
-            onSubmit={(values: IInitialValues) => console.log(values)}
-          >
-            <Form>
-              <Input id='userName' name='userName' type='text' autoComplete='off' placeholder='Username'/>
-              <Input id='email' name='email' type='text' placeholder='Email' autoComplete='off' />
-              <Input id='password' name='password' autoComplete='off' placeholder='Password' />
-              <Input id='confirmPassword' name='confirmPassword' placeholder='Confirm Password' autoComplete='off'/>
-              <button type='submit'>Sign Up</button>
+    <>
+      <h1 className="mb-5 text-[51px] font-semibold">Create Account</h1>
+      <p className="mb-10 text-[22px] font-normal">
+        Welcome! Enter Your Details And Start <br /> Creating, Collecting And
+        Selling NFTs.
+      </p>
+      <div className="w-82.5">
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationShema}
+          onSubmit={(values: IInitialValues) => console.log(values)}>
+          <Form>
+            <Input
+              id="userName"
+              name="userName"
+              type="text"
+              autoComplete="off"
+              placeholder="Username"
+            />
+            <Input
+              id="email"
+              name="email"
+              type="text"
+              placeholder="Email Address"
+              autoComplete="off"
+            />
+            <Input
+              id="password"
+              name="password"
+              autoComplete="off"
+              placeholder="Password"
+            />
+            <Input
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              autoComplete="off"
+            />
+            <button
+              type="submit"
+              className="h-11.5 w-82.5 mb-4 cursor-pointer rounded-[20px] bg-purple font-semibold">
+              Create account
+            </button>
+            <div className="flex justify-center font-work font-semibold">
               <p>Already registered!</p>
-              <Link className='link' to={'/sign-in'}>
+              <Link className="ml-2.5 text-purple" to={'/sign-in'}>
                 Sign in
-              </Link> 
-            </Form>
-          </Formik>
-        </div>
+              </Link>
+            </div>
+          </Form>
+        </Formik>
       </div>
-    </section>
-  )
-}
+    </>
+  );
+};
