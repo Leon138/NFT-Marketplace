@@ -22,7 +22,7 @@ export const Header = () => {
               <Link to={'#'}>Rankings</Link>
             </li>
             <li className="w-43.5">
-              <Link to={'#'}>Connect a wallet</Link>
+              <Link to={'/connect-wallet'}>Connect a wallet</Link>
             </li>
             <Link to="/sign-up">
               <li className="h-15 w-38 flex cursor-pointer items-center justify-center rounded-[20px] bg-purple">

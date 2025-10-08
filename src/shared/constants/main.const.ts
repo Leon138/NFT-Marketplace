@@ -4,7 +4,7 @@ import type {
   CategoriesArray,
   TrendingNftsArray,
   TrendingCollectionArray,
-} from '../../components/interfaces/main';
+} from '@/components/interfaces/main';
 
 export const trendingColletcion: TrendingCollectionArray = [
   {

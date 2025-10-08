@@ -37,7 +37,7 @@ export const Footer = () => {
             <Link className="" to={'#'}>
               Rankings
             </Link>
-            <Link className="" to={'#'}>
+            <Link className="" to={'/connect-wallet'}>
               Connect a wallet
             </Link>
           </div>
