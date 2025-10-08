@@ -1,6 +1,6 @@
 import { Form, Formik } from 'formik';
 import { Link } from 'react-router-dom';
-import { Input } from '../../../shared/ui/input/input';
+import { Input } from '@/shared/ui/input/input';
 import { validationShema } from './validation-scheme';
 
 interface IInitialValues {

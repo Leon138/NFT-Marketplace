@@ -1,5 +1,5 @@
 import { Form, Formik } from 'formik';
-import { Input } from '../../../shared/ui/input/input';
+import { Input } from '@/shared/ui/input/input';
 import { Link } from 'react-router-dom';
 import { validationShema } from './validation-scheme';
 
