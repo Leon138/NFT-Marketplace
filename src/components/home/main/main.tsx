@@ -1,12 +1,13 @@
-import { Title } from '../../../shared/ui/title/title';
+import { Title } from '@/shared/ui/title/title';
 import { Timer } from '../timer/timer';
+import { DashboardStats } from '@/shared/ui/dashboard-stats/dashboard-stats';
 import {
   trendingColletcion,
   avatars,
   categories,
   trendingNfts,
   cards,
-} from '../../../shared/constants/main.const';
+} from '@/shared/constants/main.const';
 import plane from '@/shared/img/RocketLaunch.png';
 import planePurple from '@/shared/img/planepurple.png';
 import placeholder from '@/shared/img/Image Placeholder.png';
@@ -37,18 +38,9 @@ export const Main = () => {
             Get Started
           </button>
           <div className="gap-7.5 flex">
-            <div className="h-19 w-37.5">
-              <p className="font-mono text-[28px] font-bold">240k+</p>
-              <p className="font-work text-2xl font-normal">Total Sale</p>
-            </div>
-            <div className="h-19 w-37.5">
-              <p className="font-mono text-[28px] font-bold">100k+</p>
-              <p className="font-work text-2xl font-normal">Auctions</p>
-            </div>
-            <div className="h-19 w-37.5">
-              <p className="font-mono text-[28px] font-bold">240k+</p>
-              <p className="font-work text-2xl font-normal">Artists</p>
-            </div>
+            <DashboardStats count={'240k+'} namestatistics={'Total Sale'} />
+            <DashboardStats count={'100k+'} namestatistics={'Auctionse'} />
+            <DashboardStats count={'240k+'} namestatistics={'Artists'} />
           </div>
         </div>
         <div className="w-lg">
