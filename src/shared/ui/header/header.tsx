@@ -16,13 +16,13 @@ export const Header = () => {
         <div className="w-152 flex items-center justify-center">
           <ul className="flex list-none items-center gap-3 text-center font-work text-base font-semibold text-white">
             <li className="w-35 py-1.5">
-              <Link to={'#'}>Marketplace</Link>
+              <Link to={'/marketplace'}>Marketplace</Link>
             </li>
             <li className="w-28">
-              <Link to={'#'}>Rankings</Link>
+              <Link to={'/rankings'}>Rankings</Link>
             </li>
             <li className="w-43.5">
-              <Link to={'#'}>Connect a wallet</Link>
+              <Link to={'/connect-wallet'}>Connect a wallet</Link>
             </li>
             <Link to="/sign-up">
               <li className="h-15 w-38 flex cursor-pointer items-center justify-center rounded-[20px] bg-purple">

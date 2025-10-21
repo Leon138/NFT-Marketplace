@@ -5,7 +5,7 @@ interface MainContentProps {
   children?: ReactNode;
 }
 
-export const MainContent: React.FC<MainContentProps> = ({ children }) => {
+export const MainContent = ({ children }: MainContentProps) => {
   return (
     <main>
       {children}

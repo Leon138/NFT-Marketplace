@@ -6,6 +6,7 @@ interface ITrendingCollection {
   nameNft: string;
   avatar: string;
   nickname: string;
+  className: string;
 }
 
 export type TrendingCollectionArray = Array<ITrendingCollection>;

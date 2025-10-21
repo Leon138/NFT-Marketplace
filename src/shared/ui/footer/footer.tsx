@@ -31,13 +31,13 @@ export const Footer = () => {
             Explore
           </h1>
           <div className="w-34 flex flex-col gap-5 font-work text-base font-normal">
-            <Link className="" to={'#'}>
+            <Link className="" to={'/marketplace'}>
               Marketplace
             </Link>
             <Link className="" to={'#'}>
               Rankings
             </Link>
-            <Link className="" to={'#'}>
+            <Link className="" to={'/connect-wallet'}>
               Connect a wallet
             </Link>
           </div>

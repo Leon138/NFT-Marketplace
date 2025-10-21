@@ -12,7 +12,7 @@ interface IInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export const Input = React.forwardRef<HTMLInputElement, IInputProps>(
   ({ ...props }, ref) => {
-    const [showPassword, setShowPassword] = useState<boolean>(false);
+    const [showPassword, setShowPassword] = useState(false);
 
     const showPasswordIcon = (event: React.MouseEvent<HTMLElement>) => {
       event.preventDefault();
