@@ -16,7 +16,7 @@ export const Header = () => {
         <div className="w-152 flex items-center justify-center">
           <ul className="flex list-none items-center gap-3 text-center font-work text-base font-semibold text-white">
             <li className="w-35 py-1.5">
-              <Link to={'#'}>Marketplace</Link>
+              <Link to={'/marketplace'}>Marketplace</Link>
             </li>
             <li className="w-28">
               <Link to={'#'}>Rankings</Link>
