@@ -15,6 +15,8 @@ export const trendingColletcion: TrendingCollectionArray = [
     nameNft: 'DSGN Animals',
     avatar: '/src/shared/img/avatarfox.png',
     nickname: 'MrFox',
+    className:
+      'transform cursor-pointer transition-transform duration-300 ease-in-out hover:scale-95',
   },
   {
     nftBigImage: '/src/shared/img/bigmushrooms.png',
@@ -24,6 +26,8 @@ export const trendingColletcion: TrendingCollectionArray = [
     nameNft: 'Magic Mushrooms',
     avatar: '/src/shared/img/avatarman.png',
     nickname: 'Shroomie',
+    className:
+      'transform cursor-pointer transition-transform duration-300 ease-in-out hover:scale-95',
   },
   {
     nftBigImage: '/src/shared/img/bigrobot.png',
@@ -33,6 +37,8 @@ export const trendingColletcion: TrendingCollectionArray = [
     nameNft: 'Disco Machines',
     avatar: '/src/shared/img/avatarrobot.png',
     nickname: 'BeKind2Robots',
+    className:
+      'transform cursor-pointer transition-transform duration-300 ease-in-out hover:scale-95',
   },
 ];
 

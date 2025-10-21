@@ -2,6 +2,7 @@ import { Form, Formik } from 'formik';
 import { Input } from '@/shared/ui/input/input';
 import { Link } from 'react-router-dom';
 import { validationShema } from './validation-scheme';
+import { UniversalTitle } from '@/shared/ui/title/title';
 
 interface IInitialValues {
   userName: string;
@@ -20,11 +21,18 @@ export const SignUpForm = () => {
 
   return (
     <>
-      <h1 className="mb-5 text-[51px] font-semibold">Create Account</h1>
-      <p className="mb-10 text-[22px] font-normal">
-        Welcome! Enter Your Details And Start <br /> Creating, Collecting And
-        Selling NFTs.
-      </p>
+      <div className="mb-10">
+        <UniversalTitle
+          sectionTitle={'Create Account'}
+          text={
+            <>
+              Welcome! Enter Your Details And Start <br />
+              Creating, Collecting And Selling NFTs.
+            </>
+          }
+          mbSize="5"
+        />
+      </div>
       <div className="w-82.5">
         <Formik
           initialValues={initialValues}

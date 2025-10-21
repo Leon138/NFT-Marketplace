@@ -16,20 +16,21 @@ import purpleEye from '@/shared/img/purpleeye.png';
 import avatarShroomie from '@/shared/img/avatarshroomie.png';
 import astronaut from '@/shared/img/astronaut.png';
 import mail from '@/shared/img/mail.png';
+import { Link } from 'react-router-dom';
 
 export const Main = () => {
   return (
     <>
       <section className="mb-40 mt-20 flex justify-between text-white">
-        <div className="mr-7.5 h-136 w-lg">
-          <h1 className="mb-5 font-work text-[67px] font-semibold leading-[1.2]">
+        <div className="mr-7.5 h-136 w-lg font-work">
+          <h1 className="mb-5 text-[67px] font-semibold leading-[1.2]">
             Discover <br></br> Digital Art & <br></br> Collect NFTs
           </h1>
-          <p className="font-work text-2xl font-normal">
+          <p className="text-[22px] font-normal">
             NFT Marketplace UI Created With Anima For Figma. Collect, Buy And
             Sell Art From More Than 20k NFT Artists.
           </p>
-          <button className="my-7.5 h-15 flex w-56 cursor-pointer items-center justify-center rounded-[20px] bg-purple font-work text-base font-semibold">
+          <button className="my-7.5 h-15 flex w-56 cursor-pointer items-center justify-center rounded-[20px] bg-purple text-base font-semibold">
             <img
               src={plane}
               alt="logo"
@@ -67,11 +68,27 @@ export const Main = () => {
         <div className="gap-7.5 flex">
           {trendingColletcion.map((item, index) => (
             <div key={index}>
-              <img src={item.nftBigImage} alt="picture dog" />
+              <img
+                src={item.nftBigImage}
+                alt={item.nameNft}
+                className={item.className}
+              />
               <div className="my-4 flex gap-4">
-                <img src={item.nftSmallImage1} alt="picture cat" />
-                <img src={item.nftSmallImage2} alt="picture bear" />
-                <img src={item.imgCount} alt="picture count" />
+                <img
+                  src={item.nftSmallImage1}
+                  alt={item.nameNft}
+                  className={item.className}
+                />
+                <img
+                  src={item.nftSmallImage2}
+                  alt={item.nameNft}
+                  className={item.className}
+                />
+                <img
+                  src={item.imgCount}
+                  alt="picture count"
+                  className={item.className}
+                />
               </div>
               <div>
                 <p className="mb-2.5 text-2xl font-semibold">{item.nameNft}</p>
@@ -95,20 +112,22 @@ export const Main = () => {
               text={'Checkout Top Rated Creators On The NFT Marketplace'}
             />
           </div>
-          <button className="w-62 my-7.5 h-15 border-purple-500 flex cursor-pointer items-center justify-center rounded-[20px] border-2 border-solid font-work text-base font-semibold">
-            <img
-              src={planePurple}
-              alt="plane"
-              className="mr-3 h-auto max-w-full rounded-lg"
-            />
-            View Rankings
-          </button>
+          <Link to={'/rankings'}>
+            <button className="w-62 my-7.5 h-15 border-purple-500 flex cursor-pointer items-center justify-center rounded-[20px] border-2 border-solid font-work text-base font-semibold">
+              <img
+                src={planePurple}
+                alt="plane"
+                className="mr-3 h-auto max-w-full rounded-lg"
+              />
+              View Rankings
+            </button>
+          </Link>
         </div>
         <div className="gap-7.5 grid grid-cols-4 font-work">
           {avatars.map((avatar, index) => (
             <div
               key={index}
-              className="relative flex h-60 w-60 flex-col items-center rounded-[20px] bg-customgray pt-5 text-white">
+              className="relative flex h-60 w-60 transform cursor-pointer flex-col items-center rounded-[20px] bg-customgray pt-5 text-white transition-transform duration-300 ease-in-out hover:scale-95">
               <div className="top-4.5 h-7.5 w-7.5 absolute left-5 flex items-center justify-center rounded-[20px] bg-gray2B font-mono text-base text-[#858584]">
                 {index + 1}
               </div>
@@ -132,7 +151,9 @@ export const Main = () => {
         <Title sectionTitle={'Browse Categories'} />
         <div className="mt-12.5 gap-7.5 grid grid-cols-4">
           {categories.map((categories, index) => (
-            <div key={index} className="h-79 w-60">
+            <div
+              key={index}
+              className="h-79 w-60 transform cursor-pointer transition-transform duration-300 ease-in-out hover:scale-95">
               <img src={categories.image} alt={categories.name} />
               <div className="h-19 px-7.5 rounded-b-[20px] bg-customgray py-5">
                 <h2 className="text-[22px] font-semibold">{categories.name}</h2>
@@ -161,7 +182,9 @@ export const Main = () => {
         </div>
         <div className="gap-7.5 mb-20 flex">
           {trendingNfts.map((trending, index) => (
-            <div key={index}>
+            <div
+              key={index}
+              className="transform cursor-pointer transition-transform duration-300 ease-in-out hover:scale-95">
               <img src={trending.image} alt={trending.name} />
               <div className="h-43 px-7.5 rounded-b-[20px] bg-customgray pt-5">
                 <h1 className="text-[22px] font-semibold">{trending.name}</h1>

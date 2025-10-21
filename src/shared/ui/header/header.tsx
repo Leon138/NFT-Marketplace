@@ -19,7 +19,7 @@ export const Header = () => {
               <Link to={'/marketplace'}>Marketplace</Link>
             </li>
             <li className="w-28">
-              <Link to={'#'}>Rankings</Link>
+              <Link to={'/rankings'}>Rankings</Link>
             </li>
             <li className="w-43.5">
               <Link to={'/connect-wallet'}>Connect a wallet</Link>

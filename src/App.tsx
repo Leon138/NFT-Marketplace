@@ -10,6 +10,7 @@ import { SignInForm } from './components/account/sign-in-form/sign-in';
 import { Marketplace } from './components/marketplace/marketplace';
 import { Form } from './components/account/form/form';
 import { Main } from './components/home/main/main';
+import { Rankings } from './components/rankings/rankings';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Container />}>
             <Route path="/" element={<Main />} />
             <Route path="/marketplace" element={<Marketplace />} />
+            <Route path="/rankings" element={<Rankings />} />
           </Route>
           <Route path="/" element={<Form />}>
             <Route path="/sign-up" element={<SignUpForm />} />

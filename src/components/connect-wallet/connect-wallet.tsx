@@ -3,6 +3,7 @@ import connectWalletImg from '@/shared/img/connectwallet.png';
 import metamaskImg from '@/shared/img/metamask.png';
 import walletConnectImg from '@/shared/img/walletConnect.png';
 import coinbaseImg from '@/shared/img/coinbase.png';
+import { UniversalTitle } from '@/shared/ui/title/title';
 
 export const ConnectWallet = () => {
   return (
@@ -15,12 +16,19 @@ export const ConnectWallet = () => {
         />
       </div>
       <div className="top-25 relative flex flex-col font-work text-white">
-        <h1 className="mb-5 text-[51px] font-semibold">Connect Wallet</h1>
-        <p className="mb-10 text-[22px] font-normal">
-          Choose a wallet you want to connect.
-          <br />
-          There are several wallet providers.
-        </p>
+        <div className="mb-10">
+          <UniversalTitle
+            sectionTitle={'Connect Wallet'}
+            text={
+              <>
+                Choose a wallet you want to connect.
+                <br />
+                There are several wallet providers.
+              </>
+            }
+            mbSize="5"
+          />
+        </div>
         <div>
           <Button img={metamaskImg} nameWallet={'Metamask'} />
           <Button img={walletConnectImg} nameWallet={'Wallet Connect'} />

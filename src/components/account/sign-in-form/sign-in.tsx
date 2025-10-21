@@ -2,6 +2,7 @@ import { Form, Formik } from 'formik';
 import { Link } from 'react-router-dom';
 import { Input } from '@/shared/ui/input/input';
 import { validationShema } from './validation-scheme';
+import { UniversalTitle } from '@/shared/ui/title/title';
 
 interface IInitialValues {
   email: string;
@@ -16,10 +17,13 @@ export const SignInForm = () => {
 
   return (
     <>
-      <h1 className="mb-5 text-[51px] font-semibold">Sign In</h1>
-      <p className="mb-10 text-[22px] font-normal">
-        Welcome back! Please enter your credentials.
-      </p>
+      <div className="mb-10">
+        <UniversalTitle
+          sectionTitle={'Sign In'}
+          text={' Welcome back! Please enter your credentials.'}
+          mbSize="5"
+        />
+      </div>
       <div className="w-82.5">
         <Formik
           initialValues={initialValues}

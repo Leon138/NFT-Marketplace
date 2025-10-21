@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { marketplace } from '@/shared/constants/marketplace.const';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+import { UniversalTitle } from '@/shared/ui/title/title';
 
 export const Marketplace = () => {
   const [count] = useState<number>(67);
@@ -21,11 +22,12 @@ export const Marketplace = () => {
 
   return (
     <section>
-      <div className="mt-20 font-work text-white">
-        <h1 className="mb-5 text-[51px] font-semibold">Browse Marketplace</h1>
-        <p className="mb-7.5 text-[22px] font-normal">
-          Browse through more than 50k NFTs on the NFT Marketplace.
-        </p>
+      <div className="mb-7.5 mt-20 font-work text-white">
+        <UniversalTitle
+          sectionTitle={'Browse Marketplace'}
+          text={'Browse through more than 50k NFTs on the NFT Marketplace.'}
+          mbSize="2.5"
+        />
       </div>
       <div className="relative mb-20 flex flex-col">
         <input
